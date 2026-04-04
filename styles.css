@@ -1,0 +1,139 @@
+/*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+
+*/
+
+/* ── Hymnary Search Modal ────────────────────────────────────────── */
+
+.hymnary-modal .modal-content {
+	padding: 20px;
+}
+
+/* Search row: input + button side by side */
+.hymnary-search-row {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+
+.hymnary-search-input {
+	flex: 1;
+	padding: 6px 10px;
+	font-size: var(--font-ui-medium);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-s);
+	background: var(--background-primary);
+	color: var(--text-normal);
+}
+
+.hymnary-search-input:focus {
+	outline: none;
+	border-color: var(--interactive-accent);
+	box-shadow: 0 0 0 2px rgba(var(--interactive-accent-rgb), 0.2);
+}
+
+.hymnary-search-btn {
+	padding: 6px 16px;
+	white-space: nowrap;
+}
+
+/* Loading indicator */
+.hymnary-loading {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 0;
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+}
+
+.hymnary-loading-spinner {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border: 2px solid var(--background-modifier-border);
+	border-top-color: var(--interactive-accent);
+	border-radius: 50%;
+	animation: hymnary-spin 0.7s linear infinite;
+}
+
+@keyframes hymnary-spin {
+	to { transform: rotate(360deg); }
+}
+
+/* Hint / count text */
+.hymnary-hint,
+.hymnary-count {
+	font-size: var(--font-ui-small);
+	color: var(--text-muted);
+	margin: 0 0 8px;
+}
+
+/* Results list */
+.hymnary-results {
+	max-height: 420px;
+	overflow-y: auto;
+}
+
+/* Individual result card */
+.hymnary-result-item {
+	padding: 10px 12px;
+	border-radius: var(--radius-s);
+	cursor: pointer;
+	transition: background 0.1s ease;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.hymnary-result-item:last-child {
+	border-bottom: none;
+}
+
+.hymnary-result-item:hover {
+	background: var(--background-modifier-hover);
+}
+
+.hymnary-result-title {
+	display: block;
+	font-size: var(--font-ui-medium);
+	color: var(--text-normal);
+	margin-bottom: 3px;
+}
+
+.hymnary-result-meta {
+	font-size: var(--font-ui-small);
+	color: var(--text-muted);
+	line-height: 1.5;
+}
+
+.hymnary-result-author {
+	color: var(--text-accent);
+}
+
+.hymnary-result-firstline {
+	font-style: italic;
+}
+
+.hymnary-result-meter {
+	opacity: 0.75;
+}
+
+.hymnary-dot {
+	margin: 0 2px;
+}
+
+/* Error / no-results messages */
+.hymnary-no-results,
+.hymnary-error {
+	font-size: var(--font-ui-small);
+	color: var(--text-muted);
+	padding: 12px 0;
+}
+
+.hymnary-error {
+	color: var(--text-error);
+}
+
