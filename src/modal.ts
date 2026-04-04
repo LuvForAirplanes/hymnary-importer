@@ -47,9 +47,9 @@ export class HymnSearchModal extends Modal {
 		});
 
 		// Event listeners
-		searchBtn.addEventListener('click', () => this.doSearch());
+		searchBtn.addEventListener('click', () => { void this.doSearch(); });
 		this.searchInput.addEventListener('keydown', (e: KeyboardEvent) => {
-			if (e.key === 'Enter') this.doSearch();
+			if (e.key === 'Enter') void this.doSearch();
 		});
 
 		this.searchInput.focus();
@@ -116,7 +116,7 @@ export class HymnSearchModal extends Modal {
 				meta.createEl('span', { text: ` · ${result.meter}`, cls: 'hymnary-result-meter' });
 			}
 
-			item.addEventListener('click', () => this.importHymn(result));
+			item.addEventListener('click', () => { void this.importHymn(result); });
 		});
 	}
 
@@ -137,7 +137,7 @@ export class HymnSearchModal extends Modal {
 			this.loadingEl.hide();
 			new Notice(`Failed to import hymn: ${(err as Error).message}`);
 			// Re-render results so user can try again — re-run search silently
-			this.doSearch();
+			void this.doSearch();
 		}
 	}
 

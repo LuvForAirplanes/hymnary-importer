@@ -54,8 +54,6 @@ export class HymnarySettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 		containerEl.empty();
 
-		containerEl.createEl('h2', { text: 'Hymnary Import' });
-
 		new Setting(containerEl)
 			.setName('Import folder')
 			.setDesc('Vault folder where imported hymns are saved.')

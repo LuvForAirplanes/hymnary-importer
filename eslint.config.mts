@@ -22,6 +22,11 @@ export default tseslint.config(
 		},
 	},
 	...obsidianmd.configs.recommended,
+	{
+		rules: {
+			'obsidianmd/ui/sentence-case': ['error', { ignoreWords: ['Hymnary', 'Hymnary.org'] }],
+		},
+	},
 	globalIgnores([
 		"node_modules",
 		"dist",
