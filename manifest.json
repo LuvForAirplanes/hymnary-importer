@@ -1,7 +1,7 @@
 {
 	"id": "hymnary-importer",
 	"name": "Hymnary Importer",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
 	"description": "Search Hymnary.org and import hymns as notes into your vault.",
 	"author": "Micah Stauffer",

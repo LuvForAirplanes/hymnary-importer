@@ -1,6 +1,6 @@
 {
 	"name": "hymnary-importer",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Search Hymnary.org and import hymns as notes into your vault.",
 	"main": "main.js",
 	"type": "module",
