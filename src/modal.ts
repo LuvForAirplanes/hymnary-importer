@@ -17,7 +17,7 @@ export class HymnSearchModal extends Modal {
 		const { contentEl } = this;
 		contentEl.addClass('hymnary-modal');
 
-		contentEl.createEl('h2', { text: 'Search Hymnary.org' });
+		contentEl.createEl('h2', { text: 'Search hymnary.org' });
 
 		// Search row
 		const searchRow = contentEl.createDiv({ cls: 'hymnary-search-row' });
@@ -164,7 +164,7 @@ export class HymnSearchModal extends Modal {
 			});
 		} else {
 			yaml.push(
-				`*Lyrics not available. Visit [Hymnary.org](${result.hymnaryUrl}) for the full text.*`
+				`*Lyrics not available. Visit [hymnary.org](${result.hymnaryUrl}) for the full text.*`
 			);
 		}
 

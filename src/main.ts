@@ -8,13 +8,13 @@ export default class HymnaryPlugin extends Plugin {
 	async onload() {
 		await this.loadSettings();
 
-		this.addRibbonIcon('music', 'Search Hymnary.org', () => {
+		this.addRibbonIcon('music', 'Search hymnary.org', () => {
 			new HymnSearchModal(this.app, this).open();
 		});
 
 		this.addCommand({
 			id: 'search-hymnary',
-			name: 'Search Hymnary.org',
+			name: 'Search hymnary.org',
 			callback: () => {
 				new HymnSearchModal(this.app, this).open();
 			},

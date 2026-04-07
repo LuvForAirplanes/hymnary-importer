@@ -79,7 +79,7 @@ export class HymnarySettingTab extends PluginSettingTab {
 				}));
 
 		new Setting(containerEl)
-			.setName('Include Hymnary.org URL')
+			.setName('Include hymnary.org URL')
 			.setDesc('Add the source URL as a frontmatter property on the note.')
 			.addToggle(toggle => toggle
 				.setValue(this.plugin.settings.includeHymnaryUrl)
