@@ -1,6 +1,6 @@
 # Hymnary Importer
 
-An Obsidian plugin that lets you search [Hymnary.org](https://hymnary.org) and import hymns directly into your vault as Markdown notes.
+Search Hymnary.org and import hymns as notes into your vault.
 
 ## Features
 
